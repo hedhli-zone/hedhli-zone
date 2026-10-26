@@ -111,7 +111,11 @@ app.get("/auth/discord/callback", async (req, res) => {
   const code = req.query.code;
   const returnedState = req.query.state;
   const savedState = req.cookies?.discord_oauth_state;
-
+console.log("OAuth check:", {
+  hasCode: typeof code === "string",
+  hasReturnedState: typeof returnedState === "string",
+  hasSavedState: typeof savedState === "string"
+});
   res.clearCookie("discord_oauth_state", {
     httpOnly: true,
     secure: true,
