@@ -51,6 +51,7 @@ a{display:inline-block;background:#5865F2;color:white;padding:13px 20px;border-r
 </div></body></html>`;
 }
 
+
 app.get("/", (req, res) => {
   res.send(`<!DOCTYPE html>
 <html lang="fr">
@@ -59,17 +60,79 @@ app.get("/", (req, res) => {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HEDHLI ZONE</title>
 <style>
-body{background:#111827;color:white;font-family:Arial;text-align:center;padding:50px 15px}
-.card{background:#1f2937;padding:25px;border-radius:16px;max-width:400px;margin:auto}
-a{display:inline-block;background:#5865F2;color:white;padding:13px 20px;border-radius:9px;text-decoration:none}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Arial,sans-serif;
+  color:#fff;
+  background:
+    radial-gradient(ellipse at 50% 0%,#492080 0%,transparent 55%),
+    linear-gradient(145deg,#080711,#130b25 55%,#080711);
+}
+nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:22px 7%;border-bottom:1px solid #ffffff18;
+}
+.logo{font-size:22px;font-weight:900;letter-spacing:2px}
+.logo span{color:#a855f7}
+.tag{color:#c4b5fd;font-size:12px}
+main{max-width:1000px;margin:auto;padding:65px 20px;text-align:center}
+.crown{font-size:58px;filter:drop-shadow(0 0 20px #a855f7)}
+h1{font-size:clamp(38px,8vw,68px);margin:15px 0}
+h1 span{color:#b76aff;text-shadow:0 0 25px #8129d6}
+.intro{color:#c4bfd7;line-height:1.8;max-width:570px;margin:0 auto 30px}
+.button{
+ display:inline-block;background:linear-gradient(90deg,#7135d6,#5265f5);
+ color:white;text-decoration:none;padding:15px 25px;border-radius:10px;
+ font-weight:bold;box-shadow:0 0 25px #7438d655;
+}
+.panel{
+ max-width:600px;margin:45px auto 0;padding:25px;
+ border:1px solid #9b5cff55;border-radius:18px;
+ background:linear-gradient(135deg,#ffffff0b,#8b5cf610);
+ box-shadow:0 0 35px #6515a522;
+}
+.panel h2{margin-top:0}
+.panel p{color:#c4bfd7;line-height:1.7}
+.status{color:#86efac;font-weight:bold}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:15px;margin-top:25px}
+.feature{padding:20px;border-radius:14px;background:#ffffff08;border:1px solid #ffffff15}
+.feature b{color:#d8b4fe}
+.feature p{font-size:14px;color:#bdb7ce;line-height:1.6}
+footer{padding:25px;text-align:center;color:#88819e;font-size:12px}
 </style>
 </head>
-<body><div class="card">
-<h1>HEDHLI ZONE</h1>
-<p>Connecte ton compte Discord pour obtenir Verified.</p>
-<a href="/login">Se connecter avec Discord</a>
-</div></body></html>`);
+<body>
+<nav>
+  <div class="logo">👑 HEDHLI <span>ZONE</span></div>
+  <div class="tag">COMMUNAUTÉ DISCORD</div>
+</nav>
+<main>
+  <div class="crown">👑</div>
+  <div class="tag">BIENVENUE DANS NOTRE UNIVERS</div>
+  <h1>HEDHLI <span>ZONE</span></h1>
+  <p class="intro">
+    Rejoins notre communauté Discord, connecte ton compte
+    et demande ton rôle Verified en quelques secondes.
+  </p>
+  <a class="button" href="/login">✦ Se connecter avec Discord</a>
+  <section class="panel">
+    <h2>✦ Accès vérifié</h2>
+    <p>Connecte ton compte Discord pour demander ton rôle sur le serveur.</p>
+    <div class="status">● Système de vérification</div>
+  </section>
+  <section class="features">
+    <div class="feature"><b>👑 Communauté</b><p>Rejoins l'univers HEDHLI ZONE.</p></div>
+    <div class="feature"><b>🛡️ Verified</b><p>Demande ton rôle de membre vérifié.</p></div>
+    <div class="feature"><b>💜 Espace gaming</b><p>Un espace pensé pour les passionnés de jeux.</p></div>
+  </section>
+</main>
+<footer>© 2026 HEDHLI ZONE · Tous droits réservés</footer>
+</body>
+</html>`);
 });
+
 
 app.get("/login", (req, res) => {
   if (!CLIENT_ID || !CLIENT_SECRET || !REDIRECT_URI) {
