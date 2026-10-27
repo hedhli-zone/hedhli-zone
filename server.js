@@ -272,7 +272,43 @@ app.get("/auth/discord/callback", async (req, res) => {
       return res.status(502).send(page("Rôle non attribué", "Vérifie la permission Manage Roles et la position du rôle du bot."));
     }
 
-    return res.send(page("Bienvenue sur HEDHLI ZONE", `Connexion réussie pour ${user.username}. La demande de rôle Verified a réussi !`));
+    
+return res.send(`
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEDHLI ZONE</title>
+<style>
+body {
+  background: #140c28;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px 15px;
+}
+a {
+  color: #c9a0ff;
+  font-size: 18px;
+}
+</style>
+</head>
+<body>
+<h1>HEDHLI ZONE</h1>
+<p>Connexion réussie pour ${user.username}.</p>
+<p>La demande de rôle Verified a réussi !</p>
+<p>Retour à l'application...</p>
+<a href="hedhli-zone://verified">Ouvrir HEDHLI ZONE</a>
+<script>
+setTimeout(function() {
+  window.location.href = "hedhli-zone://verified";
+}, 1500);
+</script>
+</body>
+</html>
+`);
+    
   } catch (error) {
     console.error("OAuth callback error:", error.message);
     return res.status(500).send(page("Erreur serveur", "Réessaie dans quelques instants."));
