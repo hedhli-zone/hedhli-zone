@@ -257,7 +257,7 @@ discordClient.on(Events.InteractionCreate, async interaction => {
   }
 
   try {
-    await interaction.deferReply({ ephemeral: true });
+    await interaction.deferReply({ flags: 64 });
 
     const response = await fetch(
       `https://discord.com/api/v10/guilds/${GUILD_ID}/members/${interaction.user.id}/roles/${ROLE_ID}`,
