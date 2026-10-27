@@ -296,7 +296,7 @@ a {
 </head>
 <body>
 <h1>HEDHLI ZONE</h1>
-<p>Connexion réussie pour ${user.username}.</p>
+<p>Connexion réussie pour ${escapeHtml(user.username)}.</p>
 <p>La demande de rôle Verified a réussi !</p>
 <p>Retour à l'application...</p>
 <a href="hedhli-zone://verified">Ouvrir HEDHLI ZONE</a>
