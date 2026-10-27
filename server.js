@@ -339,7 +339,7 @@ discordClient.on(Events.InteractionCreate, async interaction => {
   if (!interaction.inGuild() || interaction.guildId !== GUILD_ID) {
     return interaction.reply({
       content: "الزرّ هذا موش مفعّل في السيرفر هذا.",
-      ephemeral: true
+      flags: 64
     });
   }
 
