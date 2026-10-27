@@ -31,6 +31,7 @@ function escapeHtml(value) {
   })[char]);
 }
 
+
 function page(title, message) {
   return `<!DOCTYPE html>
 <html lang="fr">
@@ -39,17 +40,47 @@ function page(title, message) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HEDHLI ZONE</title>
 <style>
-body{background:#111827;color:white;font-family:Arial;text-align:center;padding:40px 15px}
-.card{background:#1f2937;padding:25px;border-radius:16px;max-width:420px;margin:auto}
-a{display:inline-block;background:#5865F2;color:white;padding:13px 20px;border-radius:9px;text-decoration:none}
+*{box-sizing:border-box}
+body{
+  margin:0;min-height:100vh;padding:25px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:Arial,sans-serif;color:white;text-align:center;
+  background:radial-gradient(ellipse at top,#492080,transparent 65%),
+  linear-gradient(145deg,#080711,#130b25,#080711);
+}
+.card{
+  width:100%;max-width:520px;padding:35px 24px;
+  border:1px solid #a855f766;border-radius:22px;
+  background:linear-gradient(145deg,#ffffff10,#7135d615);
+  box-shadow:0 0 45px #7c3aed30;
+}
+.crown{font-size:55px;filter:drop-shadow(0 0 15px #a855f7)}
+.brand{font-size:13px;letter-spacing:3px;color:#c4b5fd}
+h1{font-size:clamp(27px,6vw,38px);overflow-wrap:anywhere}
+h1 span{color:#bd78ff}
+p{color:#d4cde5;line-height:1.8;overflow-wrap:anywhere}
+.status{margin:22px 0;color:#86efac;font-size:14px}
+a{
+  display:inline-block;margin-top:12px;padding:14px 22px;
+  color:white;text-decoration:none;font-weight:bold;border-radius:10px;
+  background:linear-gradient(90deg,#7135d6,#5265f5);
+  box-shadow:0 0 24px #7438d655;
+}
 </style>
 </head>
-<body><div class="card">
-<h1>${escapeHtml(title)}</h1>
-<p>${escapeHtml(message)}</p>
-<a href="/">Retour à l'accueil</a>
-</div></body></html>`;
+<body>
+<div class="card">
+  <div class="crown">👑</div>
+  <div class="brand">HEDHLI ZONE · DISCORD</div>
+  <h1><span>${escapeHtml(title)}</span></h1>
+  <p>${escapeHtml(message)}</p>
+  <div class="status">✦ SYSTÈME DE VÉRIFICATION</div>
+  <a href="/">← Retour à l'accueil</a>
+</div>
+</body>
+</html>`;
 }
+
 
 
 app.get("/", (req, res) => {
