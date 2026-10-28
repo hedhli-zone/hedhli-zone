@@ -148,7 +148,7 @@ footer{padding:25px;text-align:center;color:#88819e;font-size:12px}
     Rejoins notre communauté Discord, connecte ton compte
     et demande ton rôle Verified en quelques secondes.
   </p>
-  <a class="button" href="/login">✦ Se connecter avec Discord</a>
+  <a class="button" href="#" onclick="return false;">✦ Connexion temporairement désactivée</a>
   <section class="panel">
     <h2>✦ Accès vérifié</h2>
     <p>Connecte ton compte Discord pour demander ton rôle sur le serveur.</p>
