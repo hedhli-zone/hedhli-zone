@@ -87,6 +87,7 @@ app.get("/", (req, res) => {
   res.send(`<!DOCTYPE html>
 <html lang="fr">
 <head>
+<meta name="google-site-verification" content="3VQ9nE2akA1c-Xv80TOlDYvI0Xt2FiOAQxtrDaD0ZEE" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HEDHLI ZONE</title>
@@ -277,7 +278,6 @@ return res.send(`
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta name="google-site-verification" content="3VQ9nE2akA1c-Xv80TOlDYvI0Xt2FiOAQxtrDaD0ZEE" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HEDHLI ZONE</title>
