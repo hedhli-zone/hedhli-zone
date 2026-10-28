@@ -145,15 +145,19 @@ footer{padding:25px;text-align:center;color:#88819e;font-size:12px}
   <div class="tag">BIENVENUE DANS NOTRE UNIVERS</div>
   <h1>HEDHLI <span>ZONE</span></h1>
   <p class="intro">
-    Rejoins notre communauté Discord, connecte ton compte
-    et demande ton rôle Verified en quelques secondes.
-  </p>
-  <a class="button" href="#" onclick="return false;">✦ Connexion temporairement désactivée</a>
-  <section class="panel">
-    <h2>✦ Accès vérifié</h2>
-    <p>Connecte ton compte Discord pour demander ton rôle sur le serveur.</p>
-    <div class="status">● Système de vérification</div>
-  </section>
+  Bienvenue dans la communauté HEDHLI ZONE.
+  Découvre notre serveur Discord et notre communauté gaming.
+</p>
+
+<a class="button" href="#" onclick="return false;">
+  ✦ Connexion temporairement désactivée
+</a>
+
+<section class="panel">
+  <h2>✦ Notre communauté</h2>
+  <p>Retrouve notre communauté gaming et ses actualités.</p>
+  <div class="status">● Bienvenue dans HEDHLI ZONE</div>
+</section>
   <section class="features">
     <div class="feature"><b>👑 Communauté</b><p>Rejoins l'univers HEDHLI ZONE.</p></div>
     <div class="feature"><b>🛡️ Verified</b><p>Demande ton rôle de membre vérifié.</p></div>
