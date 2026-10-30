@@ -149,9 +149,7 @@ footer{padding:25px;text-align:center;color:#88819e;font-size:12px}
   Découvre notre serveur Discord et notre communauté gaming.
 </p>
 
-<a class="button" href="#" onclick="return false;">
-  ✦ Connexion temporairement désactivée
-</a>
+<a class="button" href="/login">✦ Se connecter avec Discord</a>
 
 <section class="panel">
   <h2>✦ Notre communauté</h2>
